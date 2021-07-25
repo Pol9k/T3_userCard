@@ -1,0 +1,220 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 1.8rem;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.555;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.main {
+  background: url(../images/bg-input.jpg) no-repeat center;
+  background-size: cover;
+}
+.main-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: auto;
+  right: auto;
+  max-width: 128rem;
+  width: 100%;
+  height: 7rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  z-index: 9;
+}
+.header__logo {
+  margin-left: 1.5rem;
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+}
+.header__navigation {
+  display: flex;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+}
+.header__navigation-link {
+  margin-left: 2.5rem;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+.header__navigation-link.active {
+  color: #fff;
+}
+.header__navigation-burger {
+  width: 2.2rem;
+  height: 1.6rem;
+  margin-left: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}
+.header__navigation-burger--line {
+  width: 100%;
+  height: .15rem;
+  border-radius: .1rem;
+  background: rgba(255, 255, 255, 0.5);
+  transition: .3s ease-in-out;
+}
+.header__navigation-burger:hover {
+  transform: scale(1.2);
+}
+.header__navigation-burger:hover .header__navigation-burger--line {
+  background: white;
+}
+
+.logIn {
+  position: relative;
+  display: flex;
+  max-width: 40rem;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #1e1155, #b61277);
+  padding: 5rem 3rem 4rem;
+  z-index: 1;
+}
+.logIn__linkRows {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 4rem;
+  height: 4rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: .1rem solid #130650;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.logIn__logo {
+  text-align: center;
+  font-size: 4rem;
+  margin: 0 auto;
+}
+.logIn__title {
+  margin-top: 4rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  letter-spacing: -.05rem;
+  text-align: center;
+}
+.logIn__form {
+  display: flex;
+  flex-direction: column;
+}
+.logIn__form-user {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.logIn__form-user--input {
+  display: block;
+  max-width: 40rem;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 3rem;
+  color: #fff;
+  border: .1rem solid #130650;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
+.logIn__form-user--input---span {
+  position: absolute;
+  left: 0.5rem;
+  top: .8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: .3s ease-in-out;
+}
+.logIn__form-user--input:focus ~ span, .logIn__form-user--input:active ~ span {
+  font-size: 1rem;
+  transform: translateY(-2rem);
+  opacity: .7;
+}
+.logIn__form-button {
+  width: 100%;
+  height: 4rem;
+  background: #6d0621;
+  color: #fff;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 2rem auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.logIn__simgUp {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+}
+.logIn__simgUp span {
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.8);
+}
+
+.logIn {
+  display: none;
+}
+
+.logIn.active {
+  display: block;
+  animation: opacityForm 1s ease-in-out;
+}
+
+@keyframes opacityForm {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .logIn {
+    width: 28rem;
+  }
+}
